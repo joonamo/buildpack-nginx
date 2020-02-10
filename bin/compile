@@ -30,7 +30,7 @@ if [[ ! -e "${BUILD_DIR}/www" ]]; then
   mkdir -p "${CACHE_DIR}/www"
 
   # shellcheck disable=SC2086
-  cp -r $BUILD_DIR/build* "${CACHE_DIR}/www"
+  cp -r $BUILD_DIR/build/* "${CACHE_DIR}/www"
   mkdir -p "${BUILD_DIR}/www"
 
   # shellcheck disable=SC2086
