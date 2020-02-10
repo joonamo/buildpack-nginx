@@ -2,8 +2,6 @@
 # bin/compile <build-dir> <cache-dir>
 set -eo pipefail; [[ $TRACE ]] && set -x
 
-echo "build dir: ${BUILD_DIR}, cache dir: ${CACHE_DIR}"
-
 NGINX_VERSION="1.17.0"
 NGINX_TARBALL="nginx-${NGINX_VERSION}.tar.gz"
 PCRE_VERSION="8.43"
@@ -22,6 +20,7 @@ suppress() {
 BUILD_DIR=$1
 CACHE_DIR=$2
 CUR_DIR=$(cd "$(dirname "$0")"; cd ..; pwd)
+echo "build dir: ${BUILD_DIR}, cache dir: ${CACHE_DIR}"
 
 mkdir -p "$BUILD_DIR" "$CACHE_DIR"
 
